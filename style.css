@@ -1,0 +1,184 @@
+html{
+    box-sizing: border-box;
+    font-family: sans-serif;
+    color: white;
+}
+*,*::before,*::after{
+    box-sizing: inherit;
+}
+a {
+    text-decoration: none;
+    color: white;
+}
+p{
+    margin: 0;
+}
+h2, h3,h4 {
+    margin: 0;
+}
+
+/* UTILIDADES **********************************/
+.contenedor{
+    width: 90%;
+    max-width: 1100px;
+}
+.centrar {
+    margin: 0 auto;
+}
+.negro{
+    background-color: black;
+}
+.blanco{
+    background-color: white;
+}
+.aire{
+    padding: 10px 40px;
+}
+
+/* MENU ************************************/
+.contenedor-menu{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 40px;
+    margin-bottom: 50px;
+}
+.menu-inicio {
+    border: 1px solid white;
+    color: white;
+    font-family: serif;
+    transition: background-color 0.3s ease-in;
+}
+.menu-inicio:hover{
+    background-color: white;
+    color: black;
+}
+
+nav{
+    display: flex;
+    justify-content: space-between;
+    width: 300px;
+}
+nav a {
+    color: white;
+    padding: 10px 1px;
+}
+nav a:hover {
+    border-bottom: 1px solid white;
+}
+.contenedor-menu i{ /***** ocultar barras de menu******/
+    display : none;
+}
+
+/* CONTENIDO PRINCIPAL ************************************/
+
+.contenedor-contenido{
+    display: flex;
+    justify-content: space-between;
+    font-family: Calibri, 'Trebuchet MS', sans-serif;
+}
+.imagen {
+    width: 60%;
+}
+
+.imagen .habitacion{
+    width: 100%;
+}
+.descripcion{
+    margin-top: 50px;
+}
+
+.descripcion p {
+    margin-top: 40px;
+    width: 200px;
+    margin-bottom: 20px;
+    font-weight:400;
+}
+
+/* AVATAR */
+.contenedor-avatar{
+    width: 300px;
+    background-color: rgb(20, 20, 20);
+    border-radius: 3px;
+    position: relative;
+    top: -60px;
+    left: 30%;
+}
+.avatar{
+    display: flex;
+}
+.avatar img{
+    height: 60px;
+    border-radius: 30px;
+    margin: 10px 20px;
+}
+.datos-avatar{
+    margin-top: 20px;
+}
+footer p {
+    text-align: center;
+    color:rgb(58, 58, 58)
+}
+
+/* mediaquery ************************************/
+@media (max-width: 720px) {
+    .contenedor-exterior-nav{
+        position:fixed;
+        background-color:black;
+        top: 0;
+        left: 0;
+        width:100%;
+        height: 100%;
+        z-index: 2;
+    }
+    .contenedor-nav{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+        width: 100%;
+    }
+    nav a {
+        padding: 10px 0px;
+    }
+
+    .contenedor-menu i{
+        display : block;
+    }
+
+
+    .contenedor-exterior-nav{
+        display: none;
+    }
+    .icono{   /* mostrar barras de menu*/
+        display: block;
+    }
+
+    .contenedor-contenido{
+        display: block;
+    }
+    .imagen {
+        margin-top: 30px;
+        width: 100%;
+    }
+    .habitacion{
+        width: 100%;
+        margin: 0;
+        display: block;
+    }
+    .contenedor-avatar {
+        top: -30px;
+        left: 40px;
+        width: 70%;
+    }
+
+    i:hover{
+        color: red;
+    }
+
+}
+
+
+
+
